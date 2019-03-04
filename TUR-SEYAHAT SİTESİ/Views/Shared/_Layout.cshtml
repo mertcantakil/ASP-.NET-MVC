@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MK Turizm Seyahat</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link href="~/css/anasayfa3.css" rel="stylesheet" />
+        <script src="~/js/anasayfajs.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+   
+    <nav class="navbar navbar-default navbar-fixed-top" id="headerforcss">
+        <a class="navbar-brand" href="#">
+            <img src="~/images/logo.png" alt="Logo" style="width:30px; float:left;">
+        </a>
+        <div class="container" style="color:#fff;">
+
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">MK Tur Seyahat</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Anasayfa</a></li>
+                    <li><a asp-area="" asp-controller="todo" asp-action="Index">Rezervasyonlarım</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">İletisim</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 navbar-right" style="margin-top:7px;">
+                    <input class="form-control mr-sm-2" type="search" placeholder="ara" aria-label="Search">
+                    <button class="btn btn-primary my-2 my-sm-0" type="submit">Ara</button>
+                </form>
+                @await Html.PartialAsync("_LoginPartial")
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer style="margin-top: 20px;">
+            <style>
+                .social:hover {
+                    -webkit-transform: scale(1.1);
+                    -moz-transform: scale(1.1);
+                    -o-transform: scale(1.1);
+                }
+
+                .social {
+                    -webkit-transform: scale(0.8);
+                    -moz-transform: scale(0.8);
+                    -o-transform: scale(0.8);
+                    -webkit-transition-duration: 0.5s;
+                    -moz-transition-duration: 0.5s;
+                    -o-transition-duration: 0.5s;
+                }
+                #social-fb:hover {
+                    color: #3B5998;
+                }
+
+                #social-tw:hover {
+                    color: #4099FF;
+                }
+
+                #social-gp:hover {
+                    color: #d34836;
+                }
+
+                #social-em:hover {
+                    color: #f39c12;
+                }
+                h3{
+                    text-align:center;
+                    font-family:'Times New Roman';
+                    font:bold;
+                    color:#ff6a00;
+                }
+            </style>
+            <h3>Bizi takip edin fırsatları kaçırmayın..!</h3>
+            <div class="text-center center-block">
+                <br />
+                <a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="https://plus.google.com/"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+                <a href="mailto:mkturizm@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+            </div>
+            <hr />
+            <p>&copy; 2018 - Mertcan Takıl- Konuralp Güler</p>
+
+        </footer>
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

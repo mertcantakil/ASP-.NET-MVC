@@ -1,0 +1,461 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      
+        <div class="item active">
+            <img src="~/images/Granada-Luxury-Belek-Genel-254099.jpg" alt="ASP.NET" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    <strong>
+                        Granada Luxury Belek
+                        Belek, Antalya
+                    </strong>
+                   
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/MRK_GeneralView--20-.jpg" alt="Visual Studio" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <p>
+                    <strong>
+                        Maxx Royal Kemer Resort
+                        Kiriş, Antalya
+                    </strong>
+                    
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/Pool---Building-View.jpg" alt="Package Management" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    <strong>
+                        Kaya Palazzo Belek
+                        Üç Kum Tepesi Mevkii, Antalya
+                    </strong>
+                    
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/Rixos-Premium-Belek-Genel-175902.jpg" alt="Microsoft Azure" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    <strong>
+                        Rixos Premium Belek
+                        İleribaşı Mevkii, Antalya
+                    </strong>
+                   
+                </p>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="container-left" >
+
+    <div class="tab">
+
+        <h3 style="text-align:center">Sonuçları Filtrele</h3>
+        <hr />
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                            <b>Yıldıza Göre Filtrele</b>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <label class="container">
+                            5 Yıldızlı Oteller
+                            <input type="checkbox" class="=tablinks" onclick="openCity(event,'BesYildiz')">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            4 Yıldızlı Oteller
+                            <input type="checkbox" class="=tablinks" onclick="openCity(event,'DortYildiz')">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            3 Yıldızlı Oteller
+                            <input type="checkbox" class="=tablinks" onclick="openCity(event,'UcYildiz')">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            2 Yıldızlı Oteller
+                            <input type="checkbox" class="=tablinks" onclick="openCity(event,'IkiYildiz')">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                            <b>Fiyata Göre Filtrele</b>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <label class="container">
+                            0-200 TL Arası
+                            <input type="checkbox" class="=tablinks" onclick="openCity(event,'Yuz')">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            201-400 TL Arası
+                            <input type="checkbox" class="=tablinks" onclick="openCity(event,'IkiYuz')">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            401-600 TL Arası
+                            <input type="checkbox" class="=tablinks" onclick="openCity(event,'DortYuz')">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            600 TL ve üstü
+                            <input type="checkbox" class="=tablinks" onclick="openCity(event,'AltiYuz')">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                            <b>Yurtiçi Oteller</b>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <label class="container">
+                            Antalya Otelleri
+                            <input type="checkbox" class="=tablinks" onclick="openCity(event,'Antalya')">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            Marmaris Otelleri
+                            <input type="checkbox" class="=tablinks" onclick="openCity(event,'Marmaris')">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            Bodrum Otelleri
+                            <input type="checkbox" class="=tablinks" onclick="openCity(event,'Bodrum')">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                            <b>Yurtdışı Oteller</b>
+                        </a>
+                        
+                    </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <label class="container">
+                                Londra Otelleri
+                            <input type="checkbox" class="=tablinks" onclick="openCity(event,'London')">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="content"  style="overflow-y: scroll">
+        <div id="London" class="tabcontent">
+            <h3>Londra Otelleri</h3>
+            <div class="col-sm-3">
+                <img src="~/images/londra1.jpg" style="max-height:100%; max-width:100%;" />
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-info">Puan : 7.7</li>
+                </ul>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star "></span>
+                <h3 style="color:red;">99£'den başlayan fiyatlarla</h3>
+            </div>
+
+
+            <div class="col-sm-9">
+                <h4>
+                    Park Plaza London, Park Royal
+                    628 Western Avenue, Londra, W3 0TA, Birleşik Krallık
+                </h4>
+                <hr />
+                <p>
+                    Londra'da, Wembley Stadyumu'na 3,2 km mesafede hizmet veren Park Plaza London, Park Royal, konuklarına bir restoran, bar ve fitness merkezi sunmaktadır.
+                    Tüm odalarda 122 cm akıllı LED TV, duşakabin, ücretsiz Elemis banyo malzemeleri ve ücretsiz hızlı Wi-Fi erişimi mevcuttur.
+
+                    Park Plaza London, Park Royal'ın fitness merkezinde Technogym kardiyo ve direnç makineleri bulunmaktadır.
+
+                    Leziz İngiliz yemeklerinde uzmanlaşmış olan restoranda rahat bir atmosferde kahvaltı, öğle ve akşam yemeği servis edilir. Barda şarap, bira ve modern kokteyllerin tadını çıkarabilirsiniz.
+
+                    Resepsiyonu 24 saat açık olan tesiste günün her saati oda servisinden yararlanmak mümkündür. Otelde 4 modern toplantı odası gibi iş olanakları mevcuttur.
+
+                    Park Plaza London, Park Royal, London Designer Outlet'e 3,3 km ve Sudbury Golf Kulübü'ne 3,4 km mesafededir. Otel, Kew Gardens'a 7 km uzaklıktadır. Londra West End bölgesine Londra metrosu ile yapacağınız 40 dakikalık bir yolculuk ile direkt ulaşabilirsiniz. En yakın havaalanı Londra Heatrow Havaalanı ise tesise 13 km mesafededir.
+
+                    Çiftler özellikle burayı tercih ediyor - iki kişilik bir seyahat için bu tesise 8,3 puan verdiler.
+
+                    Bu tesis ayrıca Londra'daki en iyi fiyat/fayda oranına sahip! Bu şehirdeki diğer tesislerle karşılaştırıldığında konuklar paralarının karşılığında daha fazlasını alıyorlar.
+                </p>
+                <img class="img-rounded" src="~/images/londra2.jpg" style="max-height:150px; max-width:150px; margin:5px; " />
+                <img class="img-rounded" src="~/images/londra3.jpg" style="max-height:150px; max-width:150px;margin:5px;" />
+                <img class="img-rounded" src="~/images/londra4.jpg" style="max-height:200px; max-width:150px;margin:5px;" />
+
+            </div>
+        </div>
+
+        <div id="Antalya" class="tabcontent" style="display:none">
+            <h3>Antalya Otelleri</h3>
+            <div class="col-sm-3">
+                <img src="~/images/MRK_GeneralView--20-.jpg" style="max-height:100%; max-width:100%;" />
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-info">Puan : 9.7</li>
+                </ul>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <h3 style="color:red;">429TL'den başlayan fiyatlarla</h3>
+            </div>
+            
+           
+            <div class="col-sm-9">
+                <h4>
+                    Maxx Royal Kemer Resort
+                    Kiriş, Antalya
+                </h4>
+                <hr />
+                <p>
+                    2014 yaz sezonunda tüm otel genelinde a la carte konseptte hizmet vermeye başlayan Maxx Royal Kemer Resort, grand butik otel anlayışı ile misafirlerini ağırlıyor. Her biri süit konseptinde tasarlanan odaları, Royal residence blokları, Laguna süitleri ve villaları ile tesis, misafirlerine benzersiz bir tatil sunuyor. 1, 2 ya da 3 yatak odalı Maxx Laguna Dubleks süitlerin de bulunduğu tesis, 9.500 m² alanı kaplayan, Antalya'nın en büyük havuzlarından birine ev sahipliği yapıyor.
+
+                    Toplam 291 odası bulunan ve 160 bin m² alan üzerinde, kendisine ait özel koylarda misafirlerini ağırlayan tesis, Maxx kalitesi ve ayrıcalığı ile tanışmak isteyenlere özel sunduğu olanaklarıyla dikkat çekiyor. Erken giriş ve geç çıkış için dinlenme alanı olarak planlanan FreeZone bunlardan biri olarak (10 oda) hizmet veriyor. Hi-tech teknolojiyle tasarlanan tesis odalarında kullanılan IOS ve Android uygulamaları sayesinde, misafirler odadan uzakta olsalar bile perde, ışık ve klima sistemlerini kontrol edebiliyorlar. (Yalnız Laguna ve Villalar için geçerlidir)
+
+                    Tesis, kendi sınırları içerisinde bulunan özel koyda konumlanan gece kulübünde düzenlediği etkinlikler ile misafirlerinin eğlence dolu bir tatil geçirmesini sağlıyor. Azure Court Restoranlar Sokağı haricinde 3  farklı fine-dining restoran ve Villa misafirler için ayrı Emerald restoranı ile misafirlerini ağırlayan tesiste, gece 02.00'ye kadar açık olan çocuk kulübü ve aquapark mevcut.
+                </p>
+                <img class="img-rounded" src="~/images/antalya1.jpg" style="max-height:150px; max-width:150px; margin:5px; " />
+                <img class="img-rounded" src="~/images/antalya2.jpg" style="max-height:150px; max-width:150px;margin:5px;" />
+                <img class="img-rounded" src="~/images/antalya3.jpg" style="max-height:200px; max-width:150px;margin:5px;" />
+
+            </div>
+        </div>
+        <div id="Marmaris" class="tabcontent" style="display:none">
+            <h3>Marmaris Otelleri</h3>
+            <div class="col-sm-3">
+                <img src="~/images/marmaris.jp.jpg" style="max-height:100%; max-width:100%;" />
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-info">Puan : 8.5</li>
+                </ul>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <h3 style="color:red;">159TL'den başlayan fiyatlarla</h3>
+            </div>
+
+
+            <div class="col-sm-9">
+                <h4>
+                    D-Resort Grand Azur Marmaris
+                    Siteler, Muğla
+                </h4>
+                <hr />
+                <p>
+                    Siteler mevkiindeki tesis; Marmaris merkeze 3 km, Muğla şehir merkezine 67 km ve Dalaman Havalimanı'na 100 km mesafede konumlanıyor.
+                    Peyzaj mimarları tarafından düzenlenmiş eşsiz bir bahçe içinde yer alan D Resort Grand Azur Marmaris, Siteler mevkiinde hizmet veriyor.
+                    Denize sıfır konumdaki tesisin, 100 m uzunluğunda plajı bulunuyor. Plajda şezlong ve şemsiye ücretsiz.
+                    Sabah, öğle ve akşam açık büfe yemekler ücretsiz. Tesisin belirlemiş olduğu markalar dahilinde yerli ve yabancı alkollü ve alkolsüz içecekler Lobi Bar'da 24 saat ücretsiz. Minibar giriş günü su, soda, soft içecekler, bira, cips ve çikolata ile dolduruluyor, günlük olarak yenileniyor. Taze sıkılmış portakal suyu kahvaltıda ücretsiz.
+
+                    Steak & Bar A La Carte Restoran rezervasyonlu ve ücretli. Steak & Bar salı ve pazar günleri arasında hizmet veriyor.
+                </p>
+                <img class="img-rounded" src="~/images/marmaris1.JPG"  style="max-height:150px; max-width:150px; margin:5px; " />
+                <img class="img-rounded" src="~/images/marmaris2.jpg"  style="max-height:150px; max-width:150px;margin:5px;" />
+                <img class="img-rounded" src="~/images/marmaris3.jpg"  style="max-height:200px; max-width:150px;margin:5px;" />
+
+            </div>
+            
+               
+            
+            
+        </div>
+        <div id="Bodrum" class="tabcontent" style="display:none">
+            <h3>Bodrum Otelleri</h3>
+            <div class="col-sm-3">
+                <img src="~/images/bodrum4.jpg" style="max-height:100%; max-width:100%;" />
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-info">Puan : 9.0</li>
+                </ul>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star "></span>
+                <h3 style="color:red;">387TL'den başlayan fiyatlarla</h3>
+            </div>
+
+
+            <div class="col-sm-9">
+                <h4>
+                    Voyage Torba
+                    Torba, Muğla
+                </h4>
+                <hr />
+                <p>
+                    Bodrum’un en güzel koylarından biri olan Torba’da, düz bir arazi üzerinde yer alan Voyage Torba, misafirlerini Ultra Her Şey Dahil konseptte ağırlıyor. A la carte restoranları, konsept barları ve açık büfe hizmet sunan ana restoranıyla günün her saatinde enfes lezzetler sunan tesiste, minik misafirler için de çocuk büfesi imkanı bulunuyor. Biri 16 yaş üzeri misafirler için hizmet veren 2 iskelesi olan otelde, yaz boyunca ünlü yıldızların ve şov guruplarının yer aldığı performanslar da sergileniyor. Çocuklar için sınırsız eğlence ve aktivite imkanı sunan tesisin deneyimli eğitmenlerin hizmet verdiği bir mini kulübü bulunuyor.
+                </p>
+                <img class="img-rounded" src="~/images/bodrum1.JPG" style="max-height:150px; max-width:150px; margin:5px; " />
+                <img class="img-rounded" src="~/images/bodrum2.jpg" style="max-height:150px; max-width:150px;margin:5px;" />
+                <img class="img-rounded" src="~/images/bodrum3.jpg" style="max-height:200px; max-width:150px;margin:5px;" />
+
+            </div>
+        </div>
+
+        <div id="Yuz" class="tabcontent"style="display:none">
+            <h3>0-200 TL ARASI</h3>
+            
+        </div>
+        <div id="IkiYuz" class="tabcontent"style="display:none">
+            <h3>201-400 TL ARASI</h3>
+            
+        </div>
+        <div id="DortYuz" class="tabcontent"style="display:none">
+            <h3>401-600 TL ARASI</h3>
+            
+        </div>
+        <div id="AltiYuz" class="tabcontent"style="display:none">
+            <h3>601 ve üzeri</h3>
+            
+        </div>
+
+        <div id="BesYildiz" class="tabcontent" style="display:none">
+            <h3>Bes Yildizli Oteller</h3>
+               
+                <div class="col-sm-3">
+                    <img src="~/images/MRK_GeneralView--20-.jpg" style="max-height:100%; max-width:100%;" />
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-info">Puan : 9.7</li>
+                    </ul>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <h3 style="color:red;">429TL'den başlayan fiyatlarla</h3>
+                </div>
+
+
+                <div class="col-sm-9">
+                    <h4>
+                        Maxx Royal Kemer Resort
+                        Kiriş, Antalya
+                    </h4>
+                    <hr />
+                    <p>
+                        2014 yaz sezonunda tüm otel genelinde a la carte konseptte hizmet vermeye başlayan Maxx Royal Kemer Resort, grand butik otel anlayışı ile misafirlerini ağırlıyor. Her biri süit konseptinde tasarlanan odaları, Royal residence blokları, Laguna süitleri ve villaları ile tesis, misafirlerine benzersiz bir tatil sunuyor. 1, 2 ya da 3 yatak odalı Maxx Laguna Dubleks süitlerin de bulunduğu tesis, 9.500 m² alanı kaplayan, Antalya'nın en büyük havuzlarından birine ev sahipliği yapıyor.
+
+                        Toplam 291 odası bulunan ve 160 bin m² alan üzerinde, kendisine ait özel koylarda misafirlerini ağırlayan tesis, Maxx kalitesi ve ayrıcalığı ile tanışmak isteyenlere özel sunduğu olanaklarıyla dikkat çekiyor. Erken giriş ve geç çıkış için dinlenme alanı olarak planlanan FreeZone bunlardan biri olarak (10 oda) hizmet veriyor. Hi-tech teknolojiyle tasarlanan tesis odalarında kullanılan IOS ve Android uygulamaları sayesinde, misafirler odadan uzakta olsalar bile perde, ışık ve klima sistemlerini kontrol edebiliyorlar. (Yalnız Laguna ve Villalar için geçerlidir)
+
+                        Tesis, kendi sınırları içerisinde bulunan özel koyda konumlanan gece kulübünde düzenlediği etkinlikler ile misafirlerinin eğlence dolu bir tatil geçirmesini sağlıyor. Azure Court Restoranlar Sokağı haricinde 3  farklı fine-dining restoran ve Villa misafirler için ayrı Emerald restoranı ile misafirlerini ağırlayan tesiste, gece 02.00'ye kadar açık olan çocuk kulübü ve aquapark mevcut.
+                    </p>
+                    <img class="img-rounded" src="~/images/antalya1.jpg" style="max-height:150px; max-width:150px; margin:5px; " />
+                    <img class="img-rounded" src="~/images/antalya2.jpg" style="max-height:150px; max-width:150px;margin:5px;" />
+                    <img class="img-rounded" src="~/images/antalya3.jpg" style="max-height:200px; max-width:150px;margin:5px;" />
+
+                </div>
+                    
+                    <div class="col-sm-3">
+                        <img src="~/images/marmaris.jp.jpg" style="max-height:100%; max-width:100%;" />
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-info">Puan : 8.5</li>
+                        </ul>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <h3 style="color:red;">159TL'den başlayan fiyatlarla</h3>
+                    </div>
+
+
+                    <div class="col-sm-9">
+                        <h4>
+                            D-Resort Grand Azur Marmaris
+                            Siteler, Muğla
+                        </h4>
+                        <hr />
+                        <p>
+                            Siteler mevkiindeki tesis; Marmaris merkeze 3 km, Muğla şehir merkezine 67 km ve Dalaman Havalimanı'na 100 km mesafede konumlanıyor.
+                            Peyzaj mimarları tarafından düzenlenmiş eşsiz bir bahçe içinde yer alan D Resort Grand Azur Marmaris, Siteler mevkiinde hizmet veriyor.
+                            Denize sıfır konumdaki tesisin, 100 m uzunluğunda plajı bulunuyor. Plajda şezlong ve şemsiye ücretsiz.
+                            Sabah, öğle ve akşam açık büfe yemekler ücretsiz. Tesisin belirlemiş olduğu markalar dahilinde yerli ve yabancı alkollü ve alkolsüz içecekler Lobi Bar'da 24 saat ücretsiz. Minibar giriş günü su, soda, soft içecekler, bira, cips ve çikolata ile dolduruluyor, günlük olarak yenileniyor. Taze sıkılmış portakal suyu kahvaltıda ücretsiz.
+
+                            Steak & Bar A La Carte Restoran rezervasyonlu ve ücretli. Steak & Bar salı ve pazar günleri arasında hizmet veriyor.
+                        </p>
+                        <img class="img-rounded" src="~/images/marmaris1.JPG" style="max-height:150px; max-width:150px; margin:5px; " />
+                        <img class="img-rounded" src="~/images/marmaris2.jpg" style="max-height:150px; max-width:150px;margin:5px;" />
+                        <img class="img-rounded" src="~/images/marmaris3.jpg" style="max-height:200px; max-width:150px;margin:5px;" />
+
+                    </div>
+                </div>
+            </div>
+        <div id="DortYildiz" class="tabcontent"style="display:none">
+            <h3>DortYildiz</h3>
+            <p>DortYildiz</p>
+        </div>
+        <div id="UcYildiz" class="tabcontent"style="display:none">
+            <h3>UcYildiz</h3>
+            <p>UcYildiz</p>
+        </div>
+        <div id="IkiYildiz" class="tabcontent"style="display:none">
+            <h3>IkiYildiz</h3>
+            <p>IkiYildiz</p>
+        </div>
+
+
+    </div>
+
+
+

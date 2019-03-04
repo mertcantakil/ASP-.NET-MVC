@@ -1,0 +1,47 @@
+﻿
+@model TodoViewModel
+@using Humanizer
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Rezervasyonlarım</h2>
+
+<div class="panel panel-primary todo-panel">
+    <div class="panel-heading">@ViewData["Title"]</div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>&#x2714;</td>
+                <td>Otel İsmi</td>
+                <td>Rezervasyon Tarihi</td>
+                <td>Isim-Soyisim</td>
+
+            </tr>
+        </thead>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>
+                    <input type="checkbox" name="@item.Id" value="true" class="done-checkbox">
+                </td>
+                <td>@item.Title</td>
+
+                <td>@item.DueAt.Humanize()</td>
+                <td>@item.OwnerName</td>
+            </tr>
+        }
+    </table>
+    <div class="panel-footer add-item-form">
+        <form>
+            <div id="add-item-error" class="text-danger">
+            </div>
+            <label for="add-item-title">Rezervasyon yapılıcak otelin ismi
+            </label>
+            <input id="add-item-title">
+            <button type="button"  id="add-item-button" style="background-color:#0094ff; color:#ffffff">Rezervasyon yap</button>
+        </form>
+    </div>
+</div>
